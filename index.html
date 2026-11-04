@@ -3547,7 +3547,7 @@ const POWERBANK_SUBCATEGORIES = [
 // Produkte in allen Kategorien — nichts anderes im Code muss geändert werden.
 // ============================================================
 // 1) Trage hier deinen echten Tracking-Tag ein (z.B. "techkompass-21"):
-const AFFILIATE_TAG = "DEIN-TAG-21";
+const AFFILIATE_TAG = "techkompass24-21";
 //
 // "Zuletzt aktualisiert"-Datum im Footer: bei jedem größeren Datenbank-Update
 // (neue Produkte hinzugefügt) hier das aktuelle Datum eintragen — zeigt
@@ -3571,7 +3571,10 @@ function productUrl(item) {
   if (item.asin && item.asin !== "DEINE-ASIN-HIER") {
     return `https://www.amazon.de/dp/${item.asin}/?tag=${AFFILIATE_TAG}`;
   }
-  return item.url || "#";
+  // Solange noch keine ASIN hinterlegt ist: Amazon-Suche nach dem Produktnamen (mit Partner-Tag)
+  if (item.url) return item.url;
+  if (item.name) return `https://www.amazon.de/s?k=${encodeURIComponent(item.name).replace(/'/g, "%27")}&tag=${AFFILIATE_TAG}`;
+  return "#";
 }
 
 // Katalog: verbindet jede fertige Kategorie mit ihren Produkten/Fragen/Preisstufen.

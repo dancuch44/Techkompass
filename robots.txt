@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://techkompass24.de/sitemap.xml

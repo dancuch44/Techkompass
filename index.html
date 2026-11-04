@@ -202,7 +202,7 @@
     font-family: 'Inter', sans-serif; line-height: 1.6;
   }
 
-  .price-note { text-align: center; font-size: 11.5px; color: #878074; margin: 18px 0 4px; line-height: 1.6; }
+  .price-disclaimer { text-align: center; font-size: 11.5px; color: #878074; margin: 18px 0 4px; line-height: 1.6; }
 
   .scroll-progress { position:fixed; top:0; left:0; height:3px; width:100%; transform-origin:0 50%; transform:scaleX(0); background:linear-gradient(90deg,#FF9900,#FFC300); z-index:9999; pointer-events:none; }
   .center { text-align: center; }
@@ -427,6 +427,18 @@
     overflow: hidden; position: relative;
   }
   .thumb img { width: 100%; height: 100%; object-fit: contain; position: relative; z-index: 1; }
+  .brand-tile { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1px;
+    background: linear-gradient(145deg, hsl(var(--bh), 38%, 24%), hsl(var(--bh), 45%, 11%)); }
+  .brand-letter { font-family: "Fraunces", Georgia, serif; font-weight:700; font-size:26px; line-height:1; color: hsl(var(--bh), 75%, 78%); }
+  .card.top .thumb { width: 84px; height: 84px; }
+  .card.top .brand-letter { font-size: 40px; }
+  .card.top .brand-name { font-size: 9px; }
+  .deal-badges { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:6px; }
+  .deal-badge { font-family:"IBM Plex Mono", monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase;
+    padding:3px 8px; border-radius:3px; border:1px solid rgba(255,153,0,0.5); color:#FF9900; background:rgba(255,153,0,0.08); }
+  .deal-badge.deal-green { border-color: rgba(120,200,120,0.5); color:#8fd18f; background:rgba(120,200,120,0.08); }
+  .brand-name { font-size:7.5px; letter-spacing:0.06em; text-transform:uppercase; color: hsl(var(--bh), 40%, 70%); opacity:0.9; font-family:"IBM Plex Mono", monospace; }
+
   .img-skeleton {
     position: absolute; inset: 0; z-index: 0;
     background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.03) 75%);
@@ -3290,7 +3302,17 @@ const TABLETS = [
     scores:{leistung:8.5, akku:8, display:9.5, mobilitaet:8.5},
     pros:["Brillantes AMOLED-Display, S Pen im Lieferumfang", "Starker Dimensity-9400+-Chip"],
     cons:["Android-Tablet-Apps teils weniger optimiert als iPad"],
-    blurb:"Das Android-Tablet mit den wenigsten Kompromissen." }
+    blurb:"Das Android-Tablet mit den wenigsten Kompromissen." },
+  { id:"t32", name:"Samsung Galaxy Tab A11", price:177, img:"", asin:"DEINE-ASIN-HIER", type:"budget",
+    scores:{leistung:5.5, akku:7.5, display:6.5, mobilitaet:8},
+    pros:["Günstiger Einstieg von Samsung", "Für Streaming und Surfen völlig ausreichend"],
+    cons:["Schwächere Leistung", "Display nur durchschnittlich"],
+    blurb:"Preiswertes Alltags-Tablet." },
+  { id:"t33", name:"OnePlus Pad Lite", price:195, img:"", asin:"DEINE-ASIN-HIER", type:"budget",
+    scores:{leistung:5.5, akku:8, display:6.5, mobilitaet:8},
+    pros:["Sehr günstig, großer Akku", "Leichtes, handliches Format"],
+    cons:["Nur Einsteiger-Leistung"],
+    blurb:"Günstiges Tablet für Video und Lesen." }
 ];
 
 const TABLET_QUESTIONS = [
@@ -3809,7 +3831,19 @@ const THUMB_FALLBACK_ICON = {
   </svg>`
 };
 
+// Markenkachel: Solange kein Produktbild hinterlegt ist, zeigt die Kachel den Anfangsbuchstaben
+// der Marke in einer festen, markenspezifischen Farbe (statt eines leeren Platzhalter-Symbols).
+function brandTileHtml(item) {
+  const brand = String(item.name || "").trim().split(/\s+/)[0] || "?";
+  let h = 0;
+  for (let i = 0; i < brand.length; i++) h = (h * 31 + brand.charCodeAt(i)) % 360;
+  const letter = brand.charAt(0).toUpperCase();
+  const label = brand.length > 7 ? brand.slice(0, 7) : brand;
+  return `<span class="brand-tile" style="--bh:${h}"><span class="brand-letter">${letter}</span><span class="brand-name">${label}</span></span>`;
+}
+
 function thumbHtml(item) {
+  if (!item.img) return brandTileHtml(item);
   if (item.img) {
     return `<span class="img-skeleton"></span><img src="${item.img}" alt="${item.name}" loading="lazy" data-fallback-type="${item.type || ''}" data-fallback-cat="${currentCatalogKey}" onload="this.previousElementSibling.style.display='none';" onerror="handleThumbImgError(this);" />`;
   }
@@ -3974,6 +4008,14 @@ function matchReasonHtml(item) {
   return `<p class="match-reason">✓ Besonders stark bei <strong>${label}</strong> — genau das, was dir wichtig war.</p>`;
 }
 
+let cheapestResultId = null;
+function dealBadgesHtml(item, isBestMatch) {
+  const b = [];
+  if (isBestMatch) b.push('<span class="deal-badge">Beste Wahl</span>');
+  if (item.id === cheapestResultId) b.push('<span class="deal-badge deal-green">Preis-Tipp</span>');
+  return b.length ? `<div class="deal-badges">${b.join("")}</div>` : "";
+}
+
 function resultCard(item, rank, isBestMatch) {
   const specKeys = CATALOG[currentCatalogKey].questions.map(q => q.key);
   return `
@@ -3987,6 +4029,7 @@ function resultCard(item, rank, isBestMatch) {
       <div class="thumb-row">
         <div class="thumb">${thumbHtml(item)}</div>
         <div class="card-head" style="flex:1;">
+          ${dealBadgesHtml(item, isBestMatch)}
           <h3>${item.name}</h3>
         </div>
       </div>
@@ -4364,11 +4407,10 @@ function renderNow() {
       return;
     }
     let cardsHtml = "";
+    cheapestResultId = results.length > 1 ? results.reduce((m, r) => (r.price < m.price ? r : m), results[0]).id : null;
     results.forEach((p, i) => {
       cardsHtml += resultCard(p, i, p.id === bestMatchId);
-      if (i === 2 && results.length > 3) {
-        cardsHtml += `<div class="ad-slot fade-in">Anzeige (z. B. Google AdSense)</div>`;
-      }
+      // Werbeplatz (AdSense) erst einblenden, wenn Anzeigen wirklich freigeschaltet sind
     });
     const sortBtn = (mode, label) =>
       `<button class="sort-btn${resultSortMode===mode ? ' sort-btn-active':''}" onclick="resultSortMode='${mode}'; noScrollOnce=true; render();">${label}</button>`;
@@ -4383,7 +4425,7 @@ function renderNow() {
         ${sortBtn('price-desc', 'Preis ↓')}
       </div>
       ${cardsHtml}
-      <p class="price-note fade-in">Preise sind Richtwerte (inkl. MwSt.) und können sich ändern. Maßgeblich ist der aktuelle Preis auf Amazon.de. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p>
+      <p class="price-disclaimer fade-in">Preise sind Richtwerte (inkl. MwSt.) und können sich ändern. Maßgeblich ist der aktuelle Preis auf Amazon.de. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p>
       <div class="result-actions fade-in">
         <button class="cta-btn-secondary" onclick="shareResults(event)">↗ Ergebnis teilen</button>
         <button class="reset-btn" onclick="reset()">← Andere Kategorie wählen</button>

@@ -599,6 +599,67 @@
     .price-row { flex-direction: column; align-items: stretch; gap: 14px; }
     .price-row .cta-btn { width: 100%; text-align: center; justify-content: center; box-sizing: border-box; }
   }
+  /* ---- Spezialeffekte ---- */
+  .logo-compass { filter: drop-shadow(0 0 6px rgba(255,153,0,0.35)); }
+  .logo-needle { transform-origin: 50px 50px; transform: rotate(calc(var(--scroll-rot, 0deg) + var(--spin, 0deg))); transition: transform .7s cubic-bezier(.34,1.56,.64,1); }
+  .logo:hover .logo-needle { --spin: 360deg; }
+  .logo-needle-wobble { transform-origin: 50px 50px; }
+  .cat-card::before { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .25s ease;
+    background: radial-gradient(190px circle at var(--mx, 50%) var(--my, 50%), rgba(255,153,0,0.20), transparent 70%); }
+  .cat-card:hover::before { opacity: 1; }
+  @media (prefers-reduced-motion: no-preference) {
+    .logo-needle-wobble { animation: needleIntro 1.7s ease-out, needleIdle 5s ease-in-out 1.7s infinite; }
+    @keyframes needleIntro { 0% { transform: rotate(150deg); } 28% { transform: rotate(-38deg); } 48% { transform: rotate(20deg); } 66% { transform: rotate(-9deg); } 82% { transform: rotate(4deg); } 100% { transform: rotate(0deg); } }
+    @keyframes needleIdle { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(4deg); } }
+    .compass-rose > circle:first-of-type { stroke-dasharray: 1.4 3.6; transform-origin: 50px 50px; animation: bezelSpin 70s linear infinite; }
+    @keyframes bezelSpin { to { transform: rotate(360deg); } }
+    .reveal-heading span:nth-child(4) {
+      background: linear-gradient(100deg, #EDE9E3 35%, #FFC300 47%, #FF9900 53%, #EDE9E3 65%); background-size: 260% 100%;
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
+      animation-name: wordReveal, wordShine; animation-duration: .7s, 6s; animation-delay: .26s, 1.6s;
+      animation-iteration-count: 1, infinite; animation-fill-mode: forwards, none; animation-timing-function: cubic-bezier(.2,.7,.2,1), linear;
+    }
+    @keyframes wordShine { 0% { background-position: 130% 0; } 55%, 100% { background-position: -130% 0; } }
+  }
+  /* ---- Radar beim Berechnen ---- */
+  .radar { position: relative; width: 168px; height: 168px; margin: 0 auto; border-radius: 50%; overflow: hidden;
+    background: radial-gradient(circle, rgba(255,153,0,0.07), rgba(255,153,0,0) 70%);
+    box-shadow: 0 0 40px rgba(255,153,0,0.12), inset 0 0 0 1px rgba(255,153,0,0.25); transition: box-shadow .35s ease; }
+  .radar svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .radar-sweep { position: absolute; inset: 0; border-radius: 50%;
+    background: conic-gradient(from 0deg, transparent 0deg, transparent 240deg, rgba(255,153,0,0.28) 335deg, rgba(255,195,0,0.75) 360deg);
+    animation: radarSpin 1.2s linear infinite; }
+  @keyframes radarSpin { to { transform: rotate(360deg); } }
+  .blip { position: absolute; left: var(--x); top: var(--y); width: 6px; height: 6px; margin: -3px; border-radius: 50%; background: #FFC300;
+    box-shadow: 0 0 10px 2px rgba(255,195,0,0.7); opacity: 0; animation: blipPing 1.2s linear infinite backwards; animation-delay: var(--d); }
+  @keyframes blipPing { 0% { opacity: 0; transform: scale(.3); } 3% { opacity: 1; transform: scale(1.7); } 35% { opacity: .75; transform: scale(1); } 100% { opacity: 0; transform: scale(.8); } }
+  .radar.locked { box-shadow: 0 0 50px rgba(255,195,0,0.35), inset 0 0 0 1px rgba(255,195,0,0.7); }
+  .radar.locked .blip { animation: none; opacity: 1; }
+  @media (prefers-reduced-motion: reduce) { .radar-sweep { animation: none; } .blip { animation: none; opacity: .8; } }
+  @media (prefers-reduced-motion: no-preference) {
+    .cat-card, .cta-btn, .sort-btn, .tool-btn { transition-property: all, scale; transition-duration: .25s, .45s; transition-timing-function: ease, cubic-bezier(.34,1.56,.64,1); }
+    .cat-card:active { scale: .97; border-color: #FF9900; box-shadow: 0 0 0 1px rgba(255,153,0,0.45), 0 0 24px rgba(255,153,0,0.18); }
+    .cta-btn:active, .sort-btn:active, .tool-btn:active { scale: .95; }
+    .cat-card:active, .cta-btn:active, .sort-btn:active, .tool-btn:active { transition-duration: .08s, .08s; }
+  }
+  .cat-card::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0;
+    background: linear-gradient(105deg, transparent 38%, rgba(255,214,140,0.16) 46%, rgba(255,246,225,0.30) 50%, rgba(255,214,140,0.16) 54%, transparent 62%);
+    background-size: 260% 100%; background-position: 130% 0; }
+  @media (prefers-reduced-motion: no-preference) {
+    .cat-card:hover::after, .cat-card.sheen::after { animation: cardSheen .8s cubic-bezier(.4,0,.2,1); }
+  }
+  @keyframes cardSheen { 0% { opacity: 1; background-position: 130% 0; } 80% { opacity: 1; } 100% { opacity: 0; background-position: -130% 0; } }
+  /* ---- Performance: weniger Last beim Scrollen ---- */
+  .grain { mix-blend-mode: normal; }
+  .bokeh { filter: none; }
+  .backdrop { transform: translateZ(0); }
+  .is-scrolling .backdrop::before, .is-scrolling .bokeh, .is-scrolling .cta-btn-pulse, .is-scrolling .cta-btn-pulse::after,
+  .is-scrolling .card.top, .is-scrolling .sparkle, .is-scrolling .logo-needle-wobble,
+  .is-scrolling .compass-rose > circle:first-of-type, .is-scrolling .reveal-heading span:nth-child(4) { animation-play-state: paused !important; }
+  @media (hover: none) {
+    .grain { display: none; }
+    .site-header, .sticky-cta { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; background: rgba(11,11,13,0.97) !important; }
+  }
   .stat-divider { width: 1px; height: 28px; background: rgba(255,255,255,0.1); }
   .method-note {
     text-align: center; font-size: 11.5px; color: #878074; line-height: 1.6;
@@ -716,8 +777,10 @@
       <span class="logo-compass">
         <svg viewBox="0 0 100 100" fill="none">
           <circle cx="50" cy="50" r="42" stroke="#FF9900" stroke-width="4"/>
-          <path d="M50 16 L44 50 L50 84 L56 50 Z" fill="#FF9900"/>
-          <path d="M50 16 L44 50 L50 50 Z" fill="#FFC300"/>
+          <g class="logo-needle"><g class="logo-needle-wobble">
+            <path d="M50 16 L44 50 L50 84 L56 50 Z" fill="#FF9900"/>
+            <path d="M50 16 L44 50 L50 50 Z" fill="#FFC300"/>
+          </g></g>
           <circle cx="50" cy="50" r="4.5" fill="#131311" stroke="#FF9900" stroke-width="2"/>
         </svg>
       </span>
@@ -3972,7 +4035,7 @@ function answer(key, value) {
   if (step === CATALOG[currentCatalogKey].questions.length) {
     screen = "calculating";
     render();
-    setTimeout(() => { screen = "results"; render(); }, 900);
+    setTimeout(() => { screen = "results"; render(); }, 1800);
     return;
   }
   render();
@@ -4451,12 +4514,49 @@ function renderFavs(app) {
     + `<div class="result-actions"><button class="reset-btn" onclick="reset()">← Zur Startseite</button></div>`;
 }
 
+/* ---- Spezialeffekte: Logo-Nadel, Spotlight, Sonar ---- */
+(function () {
+  const needle = document.querySelector(".logo-needle");
+  let scrollTimer;
+  window.addEventListener("scroll", () => {
+    document.body.classList.add("is-scrolling"); clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(() => document.body.classList.remove("is-scrolling"), 160);
+  }, { passive: true });
+  let ticking = false;
+  window.addEventListener("scroll", () => {
+    if (ticking) return; ticking = true;
+    requestAnimationFrame(() => { ticking = false;
+      if (needle) needle.style.setProperty("--scroll-rot", (window.scrollY * 0.18) + "deg");
+    });
+  }, { passive: true });
+  document.addEventListener("pointermove", (e) => {
+    if (e.pointerType !== "mouse") return;
+    const hn = document.getElementById("compassNeedle"); if (!hn || hn.getBoundingClientRect().width === 0) return;
+    const r = hn.getBoundingClientRect(), dx = e.clientX - (r.left + r.width / 2), dy = e.clientY - (r.top + r.height / 2);
+    hn.style.animation = "none"; hn.style.transition = "transform .35s cubic-bezier(.22,.8,.3,1)";
+    hn.style.transform = "rotate(" + (Math.atan2(dx, -dy) * 180 / Math.PI) + "deg)";
+  }, { passive: true });
+  document.addEventListener("pointermove", (e) => {
+    const c = e.target.closest && e.target.closest(".cat-card"); if (!c) return;
+    const r = c.getBoundingClientRect();
+    c.style.setProperty("--mx", (e.clientX - r.left) + "px"); c.style.setProperty("--my", (e.clientY - r.top) + "px");
+  }, { passive: true });
+  document.addEventListener("pointerdown", (e) => {
+    if (navigator.vibrate && e.pointerType === "touch" && e.target.closest && e.target.closest(".cat-card, .cta-btn, .sort-btn, .tool-btn")) navigator.vibrate(6);
+  }, { passive: true });
+})();
+
+function sheenThen(el, fn) {
+  if (el.dataset.busy) return; el.dataset.busy = "1"; el.classList.add("sheen");
+  setTimeout(fn, window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 320);
+}
+
 const CALC_VERBS = ["Vergleiche", "Prüfe", "Analysiere", "Werte aus"];
 
 function animateCalcPercent() {
   const el = document.getElementById("calcPercent");
   if (!el) return;
-  const duration = 850;
+  const duration = 1650;
   const start = performance.now();
   function tick(now) {
     const progress = Math.min((now - start) / duration, 1);
@@ -4476,8 +4576,9 @@ function startCalcTextRotation() {
   const interval = setInterval(() => {
     idx = (idx + 1) % phrases.length;
     el.textContent = phrases[idx];
-  }, 230);
-  setTimeout(() => clearInterval(interval), 900);
+  }, 420);
+  setTimeout(() => clearInterval(interval), 1700);
+  setTimeout(() => { const r = document.querySelector(".radar"); if (r) r.classList.add("locked"); }, 1450);
 }
 
 function animateCountUps() {
@@ -4584,7 +4685,7 @@ function renderNow() {
   if (screen === "categories") {
     const totalProducts = Object.values(CATALOG).reduce((sum, c) => sum + c.products.length, 0);
     const cards = CATEGORIES.map((c, i) => `
-      <div class="cat-card fade-in" style="animation-delay:${i*45}ms;" tabindex="0" role="button" onclick="selectCategory('${c.key}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectCategory('${c.key}');}">
+      <div class="cat-card fade-in" style="animation-delay:${i*45}ms;" tabindex="0" role="button" onclick="sheenThen(this, () => selectCategory('${c.key}'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectCategory('${c.key}');}">
         ${c.key === "handys" ? '<span class="cat-badge">Beliebt</span>' : ''}
         ${(c.key === "smartwatches" || c.key === "lautsprecher") ? '<span class="cat-badge cat-badge-new">Neu</span>' : ''}
         <div class="cat-icon">${c.icon}</div>
@@ -4594,7 +4695,7 @@ function renderNow() {
       </div>`).join("");
     app.innerHTML = `
       <div class="search-box fade-in">
-        <input id="siteSearch" type="search" placeholder="Modell suchen, z. B. Galaxy S25 oder AirPods" autocomplete="off" aria-label="Produkt suchen" oninput="runSearch(this.value)" />
+        <input id="siteSearch" type="search" placeholder="Modell suchen, z. B. Galaxy S25" autocomplete="off" aria-label="Produkt suchen" oninput="runSearch(this.value)" />
         <div id="searchResults" class="search-results" aria-live="polite"></div>
       </div>
       <div class="cat-grid">${cards}</div>
@@ -4652,7 +4753,7 @@ function renderNow() {
       const count = cfg.products.filter(p => s.types.includes(p.type)).length;
       const iconSvg = TYPE_ICONS[s.icon] || "";
       return `
-      <div class="cat-card fade-in" tabindex="0" role="button" onclick="selectSubcategory('${s.key}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectSubcategory('${s.key}');}">
+      <div class="cat-card fade-in" tabindex="0" role="button" onclick="sheenThen(this, () => selectSubcategory('${s.key}'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectSubcategory('${s.key}');}">
         <div class="cat-icon"><span style="display:inline-flex;width:26px;height:26px;stroke:#FF9900;">${iconSvg}</span></div>
         <span class="cat-name">${s.label}</span>
         <span class="cat-tag">${count} ${count === 1 ? 'Produkt' : 'Produkte'}</span>
@@ -4693,14 +4794,7 @@ function renderNow() {
   if (screen === "calculating") {
     app.innerHTML = `
       <div class="calculating-box fade-in">
-        <svg class="calc-compass" width="70" height="70" viewBox="0 0 100 100" fill="none">
-          <circle cx="50" cy="50" r="43" stroke="#FF9900" stroke-width="1.4" stroke-opacity="0.4"/>
-          <g class="calc-needle">
-            <path d="M50 20 L44 50 L50 80 L56 50 Z" fill="#FF9900"/>
-            <path d="M50 20 L44 50 L50 50 Z" fill="#FFC300"/>
-          </g>
-          <circle cx="50" cy="50" r="4" fill="#0B0B0D" stroke="#FF9900" stroke-width="1.5"/>
-        </svg>
+        <div class="radar" aria-hidden="true"><div class="radar-sweep"></div><svg viewBox="0 0 100 100" fill="none"><g stroke="#FF9900" stroke-opacity="0.28" stroke-width="0.6"><circle cx="50" cy="50" r="47"/><circle cx="50" cy="50" r="31"/><circle cx="50" cy="50" r="15"/><line x1="50" y1="3" x2="50" y2="97"/><line x1="3" y1="50" x2="97" y2="50"/></g><circle cx="50" cy="50" r="2" fill="#FFC300"/></svg><span class="blip" style="--x:67.9%;--y:27.0%;--d:0.13s"></span><span class="blip" style="--x:68.7%;--y:51.6%;--d:0.32s"></span><span class="blip" style="--x:68.3%;--y:81.7%;--d:0.50s"></span><span class="blip" style="--x:38.2%;--y:70.4%;--d:0.70s"></span><span class="blip" style="--x:18.2%;--y:58.5%;--d:0.85s"></span><span class="blip" style="--x:38.4%;--y:41.9%;--d:1.02s"></span><span class="blip" style="--x:41.2%;--y:25.7%;--d:1.13s"></span></div>
         <p class="calc-percent" id="calcPercent">0%</p>
         <p class="calc-text" id="calcText">Berechne deine Empfehlung …</p>
       </div>`;

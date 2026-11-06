@@ -587,6 +587,18 @@
   .fav-item { display: flex; flex-direction: column; gap: 10px; padding: 14px; margin-bottom: 10px; border-radius: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); }
   .fav-item .sr-name, .fav-item .sr-meta { display: block; }
   .fav-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  .compact-hero .wrap > h1, .compact-hero .wrap > .sub, .compact-hero .hero-graphic, .compact-hero .rule { display: none; }
+  .compact-hero .disclosure { margin-top: 14px; }
+  .match-reason { display: block !important; line-height: 1.5; }
+  .price-row .cta-btn { white-space: nowrap; }
+  @media (max-width: 480px) {
+    .thumb-row .thumb { width: 60px !important; height: 60px !important; flex: 0 0 60px; }
+    .card-head h3 { font-size: 17px !important; line-height: 1.25; }
+    .sort-bar .sort-label { display: none; }
+    .sort-btn { padding: 6px 10px; font-size: 11px; }
+    .price-row { flex-direction: column; align-items: stretch; gap: 14px; }
+    .price-row .cta-btn { width: 100%; text-align: center; justify-content: center; box-sizing: border-box; }
+  }
   .stat-divider { width: 1px; height: 28px; background: rgba(255,255,255,0.1); }
   .method-note {
     text-align: center; font-size: 11.5px; color: #878074; line-height: 1.6;
@@ -4252,7 +4264,7 @@ function resultCard(item, rank, isBestMatch) {
       <div class="price-row">
         <div>
           <span class="price">ab ${formatPrice(item.price)} €</span>
-          <span class="price-note">Basisausstattung (kleinster Speicher) — Preis je nach Speicher/Farbe auf Amazon.de abweichend</span>
+          <span class="price-note">${["handys", "tablets", "notebooks"].includes(currentCatalogKey) ? "Basisausstattung (kleinster Speicher), Preis je nach Speicher/Farbe auf Amazon.de abweichend" : "Richtpreis, Variante und Preis auf Amazon.de können abweichen"}</span>
         </div>
         ${ctaButtonHtml(item, isBestMatch)}
       </div>
@@ -4301,6 +4313,7 @@ let noScrollOnce = false;
 
 function render() {
   _hist(); updateFavCount(); updateBar();
+  document.body.classList.toggle("compact-hero", screen !== "categories");
   const app = document.getElementById("app");
   if (!app || app.innerHTML.trim() === "") { renderNow(); return; }
   // Nicht mehr bei jedem Klick ganz nach oben springen: nur wenn der Quiz-Bereich

@@ -4,16 +4,16 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>TechKompass — Redaktionelle Kaufberatung</title>
-<meta name="description" content="Finde Handys, Notebooks, Kopfhörer, Tablets, Smartwatches und mehr Technik in wenigen Fragen — unabhängige Kaufberatung mit echten Testdaten, keine bezahlten Platzierungen." />
+<meta name="description" content="Finde Handys, Notebooks, Kopfhörer, Tablets, Smartwatches und mehr Technik in wenigen Fragen — redaktionelle Kaufberatung auf Basis öffentlicher Testdaten und Herstellerangaben." />
 <meta property="og:title" content="TechKompass — Redaktionelle Kaufberatung" />
-<meta property="og:description" content="Finde in wenigen Fragen die richtige Technik für dich — unabhängig getestet, keine bezahlten Platzierungen." />
+<meta property="og:description" content="Finde in wenigen Fragen die richtige Technik für dich — Empfehlungen auf Basis öffentlicher Testdaten." />
 <link rel="canonical" href="https://techkompass24.de/" />
 <meta property="og:url" content="https://techkompass24.de/" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="de_DE" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="TechKompass — Redaktionelle Kaufberatung" />
-<meta name="twitter:description" content="Finde in wenigen Fragen die richtige Technik für dich — unabhängig getestet." />
+<meta name="twitter:description" content="Finde in wenigen Fragen die richtige Technik für dich — Empfehlungen auf Basis öffentlicher Testdaten." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='42' fill='%230B0B0D' stroke='%23FF9900' stroke-width='5'/%3E%3Cpath d='M50 16 L44 50 L50 84 L56 50 Z' fill='%23FF9900'/%3E%3Cpath d='M50 16 L44 50 L50 50 Z' fill='%23FFC300'/%3E%3Ccircle cx='50' cy='50' r='5' fill='%230B0B0D' stroke='%23FF9900' stroke-width='2.5'/%3E%3C/svg%3E" />
 <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230B0B0D'/%3E%3Ccircle cx='50' cy='50' r='34' fill='none' stroke='%23FF9900' stroke-width='5'/%3E%3Cpath d='M50 24 L45 50 L50 76 L55 50 Z' fill='%23FF9900'/%3E%3Cpath d='M50 24 L45 50 L50 50 Z' fill='%23FFC300'/%3E%3C/svg%3E" />
 <meta name="theme-color" content="#0B0B0D" />
@@ -26,7 +26,7 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "TechKompass",
-  "description": "Unabhängige Kaufberatung für Handys, Notebooks, Kopfhörer, Tablets, Smartwatches, Powerbanks und Zubehör.",
+  "description": "Redaktionelle Kaufberatung für Handys, Notebooks, Kopfhörer, Tablets, Smartwatches, Powerbanks und Zubehör.",
   "inLanguage": "de",
   "url": "https://techkompass24.de/",
   "publisher": {
@@ -195,10 +195,10 @@
   @media (prefers-reduced-motion: reduce) { .reveal-heading span { animation: none; opacity: 1; transform: none; } }
   .sub { color: #9B968C; font-size: 15px; text-align: center; margin: 0 0 6px; line-height: 1.55; }
   .rule {
-    width: 48px; height: 2px; background: #FF9900; margin: 24px auto 24px; opacity: 0.8;
+    width: 48px; height: 2px; background: #FF9900; margin: 12px auto 14px; opacity: 0.8;
   }
   .disclosure {
-    text-align: center; font-size: 11.5px; color: #878074; margin: 0 0 36px;
+    text-align: center; font-size: 11.5px; color: #878074; margin: 0 auto 24px; max-width: 420px;
     font-family: 'Inter', sans-serif; line-height: 1.6;
   }
 
@@ -551,6 +551,42 @@
   .stat { text-align: center; }
   .stat-num { display: block; font-family: 'Fraunces', serif; font-weight: 700; font-size: 22px; color: #FF9900; line-height: 1.1; }
   .stat-label { display: block; font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: #878074; text-transform: uppercase; letter-spacing: 0.6px; margin-top: 3px; }
+  .stats-bar.stats-compact { margin: 28px 0 8px; padding: 12px 10px; gap: 16px; }
+  .stats-compact .stat-num { font-size: 17px; white-space: nowrap; }
+  .how-we-rate { max-width: 440px; margin: 14px auto 0; font-size: 12px; color: #9B968C; line-height: 1.6; }
+  .how-we-rate summary { cursor: pointer; text-align: center; color: #FF9900; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.5px; text-transform: uppercase; list-style: none; padding: 8px 0; }
+  .how-we-rate summary::-webkit-details-marker { display: none; }
+  .how-we-rate p { margin: 8px 0; }
+  .search-box { max-width: 520px; margin: 0 auto 18px; }
+  .search-box input { width: 100%; box-sizing: border-box; padding: 12px 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04); color: #EDE9E3; font-family: 'Inter', sans-serif; font-size: 14px; }
+  .search-box input::placeholder { color: #878074; }
+  .search-box input:focus { outline: none; border-color: #FF9900; box-shadow: 0 0 0 3px rgba(255,153,0,0.15); }
+  .search-results { margin-top: 8px; }
+  .sr-item { display: flex; flex-direction: column; gap: 2px; padding: 10px 14px; margin-bottom: 6px; border-radius: 10px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); text-decoration: none; }
+  .sr-item:hover { border-color: rgba(255,153,0,0.5); }
+  .sr-name { color: #EDE9E3; font-size: 13.5px; font-weight: 500; }
+  .sr-meta { color: #FF9900; font-family: 'IBM Plex Mono', monospace; font-size: 11px; }
+  .sr-empty { color: #878074; font-size: 12px; text-align: center; margin: 8px 0; }
+  .more-wrap { text-align: center; margin: 18px 0 6px; }
+  .card-tools { display: flex; gap: 8px; margin: 10px 0 4px; flex-wrap: wrap; }
+  .tool-btn { background: rgba(255,255,255,0.05); color: #C9C4BA; border: 1px solid rgba(255,255,255,0.14); border-radius: 999px; padding: 7px 14px; font-size: 12px; font-family: 'Inter', sans-serif; cursor: pointer; text-decoration: none; transition: all .15s ease; }
+  .tool-btn:hover { border-color: #FF9900; color: #EDE9E3; }
+  .tool-btn.on { background: rgba(255,153,0,0.16); border-color: #FF9900; color: #FFC300; }
+  .tool-btn:disabled { opacity: .45; cursor: default; }
+  .brand-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px; margin: 0 0 16px; }
+  .compare-bar { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(84px + env(safe-area-inset-bottom)); z-index: 45; display: none; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 999px; background: rgba(20,20,22,0.96); border: 1px solid rgba(255,153,0,0.4); box-shadow: 0 8px 28px rgba(0,0,0,0.5); font-size: 12.5px; color: #EDE9E3; white-space: nowrap; }
+  @media (min-width: 601px) { .compare-bar { bottom: 20px; } }
+  .cmp-wrap { overflow-x: auto; margin: 0 -4px; }
+  .cmp-table { border-collapse: collapse; width: 100%; min-width: 320px; font-size: 13px; color: #C9C4BA; }
+  .cmp-table th, .cmp-table td { padding: 9px 8px; border-bottom: 1px solid rgba(255,255,255,0.08); text-align: center; vertical-align: top; }
+  .cmp-table th { text-align: left; color: #878074; font-weight: 500; font-size: 11.5px; position: sticky; left: 0; background: #0B0B0D; }
+  .cmp-table .cmp-name { font-family: 'Fraunces', serif; color: #EDE9E3; font-weight: 600; }
+  .cmp-table .best { color: #FFC300; font-weight: 600; }
+  .cmp-table .cmp-small { font-size: 11.5px; line-height: 1.5; }
+  .cmp-table .cta-btn { padding: 8px 12px; font-size: 12px; }
+  .fav-item { display: flex; flex-direction: column; gap: 10px; padding: 14px; margin-bottom: 10px; border-radius: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); }
+  .fav-item .sr-name, .fav-item .sr-meta { display: block; }
+  .fav-actions { display: flex; gap: 8px; flex-wrap: wrap; }
   .stat-divider { width: 1px; height: 28px; background: rgba(255,255,255,0.1); }
   .method-note {
     text-align: center; font-size: 11.5px; color: #878074; line-height: 1.6;
@@ -598,7 +634,7 @@
   .icon-inline { width: 1em; height: 1em; vertical-align: -0.15em; stroke: currentColor; }
 
   /* ---- Hero-Grafik: eigene dekorative Illustration (kein Stockfoto) ---- */
-  .hero-graphic { display: flex; justify-content: center; margin: 8px 0 32px; opacity: 0.95; }
+  .hero-graphic { display: flex; justify-content: center; margin: 4px 0 8px; opacity: 0.95; }
   .compass-rose { filter: drop-shadow(0 0 18px rgba(255,153,0,0.15)); }
   .compass-needle {
     transform-origin: 50px 50px;
@@ -636,7 +672,7 @@
   }
   @media print {
     .backdrop, .grain, .back-to-top, .site-header, .site-footer, .disclosure,
-    .stats-bar, .method-note, .breadcrumb, .ad-slot, .result-actions, .hero-graphic,
+    .stats-bar, .method-note, .how-we-rate, .breadcrumb, .ad-slot, .result-actions, .hero-graphic,
     .cta-btn-pulse, .rank-badge .sparkle, .sticky-cta { display: none !important; }
     body { background: #fff !important; color: #111 !important; }
     .card {
@@ -680,6 +716,7 @@
       <a href="#" onclick="event.preventDefault(); navGoCategory('notebooks'); return false;">Notebooks</a>
       <a href="#" onclick="event.preventDefault(); navGoCategory('kopfhoerer'); return false;">Kopfhörer</a>
       <a href="#" onclick="event.preventDefault(); navGoAll(); return false;">Alle Kategorien</a>
+      <a href="#" onclick="event.preventDefault(); showFavs(); return false;">Merkliste<span id="favCount"></span></a>
     </nav>
     <button class="nav-toggle" id="navToggle" onclick="toggleMobileNav()" aria-label="Menü öffnen" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -689,14 +726,14 @@
 
 <div class="wrap">
   <h1 class="reveal-heading"><span>Finde</span> <span>die</span> <span>richtige</span> <span>Technik</span> <span>für</span> <span>dich</span></h1>
-  <p class="sub">Wähle eine Kategorie und beantworte ein paar kurze Fragen — für eine fundierte Empfehlung, keine Werbung.</p>
+  <p class="sub">Wähle eine Kategorie und beantworte ein paar kurze Fragen — für eine fundierte Empfehlung in rund einer Minute.</p>
 
   <!-- Optional: eigenes Header-Foto. Wird automatisch angezeigt, sobald
        HERO_PHOTO_URL weiter unten im <script>-Teil ausgefüllt ist. -->
   <div id="hero-photo-container"></div>
 
   <div class="hero-graphic">
-    <svg class="compass-rose" id="compassRose" width="120" height="120" viewBox="0 0 100 100" fill="none">
+    <svg class="compass-rose" id="compassRose" width="80" height="80" viewBox="0 0 100 100" fill="none">
       <circle cx="50" cy="50" r="43" stroke="#FF9900" stroke-width="1.2" stroke-opacity="0.5"/>
       <circle cx="50" cy="50" r="34" stroke="#FF9900" stroke-width="1" stroke-opacity="0.3"/>
       <!-- Haupt-Himmelsrichtungen -->
@@ -721,7 +758,7 @@
   </div>
   <p id="tiltHint" class="tilt-hint" style="display:none;" onclick="enableCompassTilt()">↳ Kompass antippen, um ihn mit deinem Handy zu neigen</p>
   <div class="rule"></div>
-  <p class="disclosure">Dieser Artikel enthält Affiliate-Links. Kaufst du über einen Link, erhalten wir ggf. eine Provision — für dich ändert sich der Preis nicht.<br />Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p>
+  <p class="disclosure"><strong>Anzeige:</strong> Enthält Affiliate-Links. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen — für dich ändert sich der Preis nicht.</p>
   <noscript>
     <div style="text-align:center; padding:60px 20px; color:#C9C4BA; max-width:420px; margin:0 auto;">
       <p style="font-family:'Fraunces',serif; font-size:20px; color:#EDE9E3; margin-bottom:10px;">JavaScript wird benötigt</p>
@@ -739,8 +776,8 @@
 </div>
 
 <footer class="site-footer">
-  <p>TechKompass — unabhängige Kaufberatung für Technik und Zubehör im deutschsprachigen Raum.</p>
-  <p>Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p>
+  <p>TechKompass — redaktionelle Kaufberatung für Technik und Zubehör im deutschsprachigen Raum.</p>
+  <p>Als Amazon-Partner verdiene ich an qualifizierten Verkäufen. Enthält Affiliate-Links: Kaufst du über einen Link, erhalten wir ggf. eine Provision — für dich ändert sich der Preis nicht.</p>
   <p>Alle Preise sind Richtwerte inkl. MwSt. und können sich ändern. Maßgeblich ist der aktuelle Preis auf Amazon.de zum Zeitpunkt des Kaufs.</p>
   <p id="footerStats" style="opacity:0.6; font-size:11px;"></p>
   <p style="opacity:0.35; font-size:10px;">Version 1. 11. 2026 (b)</p>
@@ -1335,7 +1372,7 @@ const PHONES = [
     pros:["Starke Akkulaufzeit im Alltag", "Flotte, zuverlässige Performance"],
     cons:["Kamera fällt im Vergleich etwas ab"],
     blurb:"Outdoor-Handy mit einem der größten Akkus am Markt (22.000 mAh)." },
-,
+
   { id:"p116", name:"Redmagic 10 Pro", price:650, img:"", asin:"DEINE-ASIN-HIER", type:"gaming",
     scores:{kamera:7, akku:9, leistung:10, display:8.5},
     pros:["Extreme Gaming-Performance mit aktiver Kühlung", "Sehr großer Akku"],
@@ -2424,34 +2461,34 @@ const LAPTOPS = [
     blurb:"Aktuell einer der günstigsten RTX-4060-Laptops am Markt." },
   { id:"l46", name:"Apple MacBook Pro 16\" M5 Pro", price:2898, img:"", asin:"DEINE-ASIN-HIER", type:"business",
     scores:{leistung:10, akku:9.5, display:9.5, mobilitaet:4},
-    pros:["Testsieger Stiftung Warentest 9/2026 (Sehr gut)", "Ca. 17,5 Stunden Akku beim Surfen, bis zu 3 externe Monitore"],
+    pros:["Hervorragende Rechenleistung und Akku", "Ca. 17,5 Stunden Akku beim Surfen, bis zu 3 externe Monitore"],
     cons:["Mit rund 2,1 kg schwer und sehr teuer"],
     blurb:"Stärkster Laptop im aktuellen Test, auch top für lokale KI." },
   { id:"l47", name:"Samsung Galaxy Book6 Touch 16\"", price:1454, img:"", asin:"DEINE-ASIN-HIER", type:"business",
     scores:{leistung:7.5, akku:8.5, display:8, mobilitaet:6.5},
     pros:["Gutes Display und ca. 14:40 Stunden Akku beim Surfen", "Bis zu drei externe Monitore anschließbar"],
     cons:["Mit rund 1,83 kg nicht ganz leicht"],
-    blurb:"Starke Windows-Alternative zu den MacBooks (Stiftung Warentest 9/2026: Gut)." },
+    blurb:"Starke Windows-Alternative zu den MacBooks mit gutem Display und langer Laufzeit." },
   { id:"l48", name:"Samsung Galaxy Book4 Edge", price:615, img:"", asin:"DEINE-ASIN-HIER", type:"alltag",
     scores:{leistung:5.5, akku:9.5, display:7.5, mobilitaet:6.5},
     pros:["Gutes Display und ca. 16:30 Stunden Akku beim Surfen", "Starkes Gesamtpaket für rund 615 €"],
     cons:["Schwache Grafikleistung, ARM-Prozessor kann ältere Programme einschränken"],
-    blurb:"Preistipp von Stiftung Warentest 9/2026 für Office, Studium und Alltag." },
+    blurb:"Preiswert und ausdauernd, ideal für Office, Studium und Alltag." },
   { id:"l49", name:"Apple MacBook Pro 14\" M5", price:1890, img:"", asin:"DEINE-ASIN-HIER", type:"business",
     scores:{leistung:9.5, akku:9, display:9.5, mobilitaet:6},
     pros:["Erstklassige Rechen- und Grafikleistung", "Liquid-Retina-XDR-Display und ausdauernder Akku"],
     cons:["Hoher Preis"],
-    blurb:"Testsieger Stiftung Warentest 1/2026 (Sehr gut), ideal für Foto- und Videobearbeitung." },
+    blurb:"Top-Leistung und Display, ideal für Foto- und Videobearbeitung." },
   { id:"l50", name:"Lenovo Yoga Slim 7 (14\" OLED, Ryzen AI 5)", price:972, img:"", asin:"DEINE-ASIN-HIER", type:"business",
     scores:{leistung:6.5, akku:8.5, display:9, mobilitaet:8.5},
     pros:["Sehr gutes OLED-Display und lange Akkulaufzeit", "Mit rund 1,2 kg besonders leicht"],
     cons:["Nur mittelmäßige Grafikleistung, nicht für aufwendige Spiele"],
-    blurb:"Günstige Windows-Alternative, Preistipp bei Stiftung Warentest 1/2026." },
+    blurb:"Günstige Windows-Alternative mit OLED-Display und geringem Gewicht." },
   { id:"l51", name:"HP OmniBook 5 16\"", price:899, img:"", asin:"DEINE-ASIN-HIER", type:"alltag",
     scores:{leistung:6, akku:9.5, display:7.5, mobilitaet:5.5},
     pros:["Rund 24 Stunden Akku bei Videowiedergabe", "Gutes Display zum fairen Preis"],
     cons:["Funktionen nur mittelmäßig, 16-Zoll-Format weniger mobil"],
-    blurb:"Ausdauerndes Alltags-Notebook unter 1.000 € (Stiftung Warentest 9/2026: Gut)." }
+    blurb:"Ausdauerndes Alltags-Notebook unter 1.000 €." }
 ];
 
 const LAPTOP_QUESTIONS = [
@@ -2717,9 +2754,9 @@ const POWERBANKS = [
     blurb:"Schlanke Alltags-Powerbank für unter 30 €." },
   { id:"pb51", name:"Aqiila B20+ (20.000mAh)", price:59, img:"", asin:"DEINE-ASIN-HIER", type:"allrounder",
     scores:{kapazitaet:8.5, ladeleistung:6.5, mobilitaet:5.5, ausstattung:5.5},
-    pros:["Testsieger bei Stiftung Warentest (Note Gut, 2/2026)", "Robuste Verarbeitung und viel nutzbare Energie"],
+    pros:["Hohe nutzbare Energiemenge", "Robuste Verarbeitung und viel nutzbare Energie"],
     cons:["Schwächen bei Handhabung und Ladezeit"],
-    blurb:"Günstigster Testsieger im Powerbank-Test von Stiftung Warentest." }
+    blurb:"Solide 20.000-mAh-Powerbank mit robuster Verarbeitung." }
 ];
 
 const POWERBANK_QUESTIONS = [
@@ -3002,11 +3039,6 @@ const PHONE_ACCESSORIES = [
     pros:["Passt zu vielen Geräten", "Hochwertige Verarbeitung"],
     cons:["Vergleichsweise teuer"],
     blurb:"Kompaktes Ladegerät für mehrere Geräte gleichzeitig." },
-  { id:"a42", name:"Samsung SmartTag2 (klein)", price:25, img:"", asin:"DEINE-ASIN-HIER", type:"tracker",
-    scores:{qualitaet:7.5, funktion:7.5, kompatibilitaet:5, preisleistung:7.5},
-    pros:["Hochwertige Verarbeitung", "Praktische Zusatzfunktionen"],
-    cons:["Kompatibilität eingeschränkter"],
-    blurb:"Kompaktere Variante des SmartTag2." },
   { id:"a43", name:"Anker MagGo Powerbank-Halterung", price:45, img:"", asin:"DEINE-ASIN-HIER", type:"wireless-charger",
     scores:{qualitaet:8, funktion:9, kompatibilitaet:7, preisleistung:6.5},
     pros:["Praktische Zusatzfunktionen", "Hochwertige Verarbeitung"],
@@ -3036,7 +3068,32 @@ const PHONE_ACCESSORIES = [
     scores:{qualitaet:9, funktion:7, kompatibilitaet:8, preisleistung:6},
     pros:["Hochwertige Verarbeitung", "Passt zu vielen Geräten"],
     cons:["Vergleichsweise teuer"],
-    blurb:"Extrem robustes, kevlarverstärktes Ladekabel." }
+    blurb:"Extrem robustes, kevlarverstärktes Ladekabel." },
+  { id:"a49", name:"Ugreen MagFlow Pro Qi2 Ladestation", price:72, img:"", asin:"DEINE-ASIN-HIER", type:"wireless-charger",
+    scores:{qualitaet:8.5, funktion:9, kompatibilitaet:7.5, preisleistung:6.5},
+    pros:["Qi2-Laden mit aktiver Kühlung", "Lädt iPhone und AirPods gleichzeitig"],
+    cons:["Mit rund 72 € nicht günstig"],
+    blurb:"Desktop-Ladestation mit aktiver Kühlung für iPhone und AirPods." },
+  { id:"a50", name:"INIU SnapGo W31-E1 3-in-1 Qi2 (15W)", price:50, img:"", asin:"DEINE-ASIN-HIER", type:"wireless-charger",
+    scores:{qualitaet:7.5, funktion:8.5, kompatibilitaet:7.5, preisleistung:8},
+    pros:["Qi2 mit 15 W, magnetisch", "Faltbar und damit reisetauglich"],
+    cons:["Am besten für iPhones und Qi2-Geräte geeignet"],
+    blurb:"Faltbare 3-in-1-Ladestation zum fairen Preis." },
+  { id:"a51", name:"INIU D5CC USB-C Kabel 100W (2er-Pack)", price:17, img:"", asin:"DEINE-ASIN-HIER", type:"cable",
+    scores:{qualitaet:7.5, funktion:8, kompatibilitaet:9, preisleistung:9},
+    pros:["Bis 100 W Power Delivery", "2er-Pack mit je ca. 2 m Länge"],
+    cons:["Reines Ladekabel ohne Extras"],
+    blurb:"Günstiges Doppelpack-Kabel, das auch Notebooks laden kann." },
+  { id:"a52", name:"INIU A11-E1 100W GaN Ladegerät", price:37, img:"", asin:"DEINE-ASIN-HIER", type:"charger",
+    scores:{qualitaet:8, funktion:9, kompatibilitaet:9, preisleistung:7.5},
+    pros:["100 W GaN-Technik, lädt auch Notebooks", "Ein Ladegerät für Handy, Tablet und Laptop"],
+    cons:["Größer als reine 30-W-Handy-Ladegeräte"],
+    blurb:"Starkes Allround-Ladegerät für unterwegs und zuhause." },
+  { id:"a53", name:"INIU I624 65W GaN Ladegerät (2 Ports)", price:25, img:"", asin:"DEINE-ASIN-HIER", type:"charger",
+    scores:{qualitaet:7.5, funktion:8.5, kompatibilitaet:8.5, preisleistung:9},
+    pros:["65 W über zwei Anschlüsse", "Kompaktes GaN-Gehäuse"],
+    cons:["Nur zwei Anschlüsse"],
+    blurb:"Preiswertes Zwei-Port-Ladegerät für Handy und Notebook." }
 ];
 
 const PHONE_ACCESSORY_QUESTIONS = [
@@ -3280,11 +3337,6 @@ const LAPTOP_ACCESSORIES = [
     pros:["Extrem leicht (unter 60g) für kompetitives Gaming", "Sehr präziser Sensor"],
     cons:["Kaum Zusatztasten für Produktivität"],
     blurb:"Referenz-Gaming-Maus für kompetitive Esports-Spieler." },
-  { id:"n47", name:"Logitech MX Master 3S", price:110, img:"", asin:"DEINE-ASIN-HIER", type:"mouse",
-    scores:{qualitaet:9, funktion:9.5, kompatibilitaet:9, preisleistung:7},
-    pros:["Elektromagnetisches Scrollrad, extrem präzise", "Steuert bis zu 3 Geräte gleichzeitig"],
-    cons:["Für Gaming ungeeignet, eher für Produktivität"],
-    blurb:"Referenz-Maus für Produktivität und Multi-Device-Workflows." },
   { id:"n48", name:"Klim Cool+ Laptop-Kühler", price:25, img:"", asin:"DEINE-ASIN-HIER", type:"cooling-pad",
     scores:{qualitaet:7, funktion:7.5, kompatibilitaet:8.5, preisleistung:9},
     pros:["Sehr günstiger Einstieg", "Passt für die meisten Laptop-Größen"],
@@ -3779,6 +3831,7 @@ let step = -1;
 let weights = {};
 
 function selectCategory(key) {
+  resultsShown = 5; brandFilter = null;
   const cat = CATEGORIES.find(c => c.key === key);
   if (cat.ready) {
     currentCatalogKey = key;
@@ -3936,6 +3989,7 @@ function shareResults(evt) {
 }
 
 function reset() {
+  brandFilter = null;
   screen = "categories";
   step = -1;
   weights = {};
@@ -4190,6 +4244,7 @@ function resultCard(item, rank, isBestMatch) {
       </div>
       <p class="blurb">${item.blurb}</p>
       ${matchReasonHtml(item)}
+      ${toolsHtml(item)}
       ${prosConsHtml(item)}
       <div class="specs-grid">
         ${specKeys.map(k => specRow(SPEC_LABELS[k], item.scores[k], k)).join("")}
@@ -4245,6 +4300,7 @@ let navDirection = "forward";
 let noScrollOnce = false;
 
 function render() {
+  _hist(); updateFavCount(); updateBar();
   const app = document.getElementById("app");
   if (!app || app.innerHTML.trim() === "") { renderNow(); return; }
   // Nicht mehr bei jedem Klick ganz nach oben springen: nur wenn der Quiz-Bereich
@@ -4271,6 +4327,115 @@ function render() {
       app.style.transform = "translateX(0)";
     });
   }, 150);
+}
+
+/* ---- Zurück-Taste: jeder Schritt bekommt einen Verlaufseintrag ---- */
+let _histKey = null, _restoring = false;
+function _snap() {
+  return { c: currentCatalogKey, s: screen, st: step, soon: soonCategory, sub: selectedSubcategory && selectedSubcategory.key,
+           pr: selectedPriceRange && selectedPriceRange.key, w: JSON.parse(JSON.stringify(weights || {})), sm: resultSortMode, cmp: compareIds.slice() };
+}
+function _hist() {
+  if (_restoring) return;
+  try {
+    const k = screen + "|" + currentCatalogKey + "|" + step;
+    if (_histKey !== null && k !== _histKey) history.pushState(_snap(), "");
+    else history.replaceState(_snap(), "");
+    _histKey = k;
+  } catch (e) {}
+}
+window.addEventListener("popstate", (e) => {
+  const st = e.state; if (!st || !CATALOG[st.c]) return;
+  const cfg = CATALOG[st.c];
+  currentCatalogKey = st.c; screen = st.s; step = st.st; soonCategory = st.soon || ""; weights = st.w || {}; resultSortMode = st.sm || "match"; compareIds = st.cmp || [];
+  selectedSubcategory = (st.sub && cfg.subcategories) ? (cfg.subcategories.find(x => x.key === st.sub) || null) : null;
+  selectedPriceRange = (st.pr && cfg.priceRanges) ? (cfg.priceRanges.find(x => x.key === st.pr) || null) : null;
+  navDirection = "back"; _histKey = screen + "|" + currentCatalogKey + "|" + step;
+  _restoring = true; render(); _restoring = false;
+});
+
+/* ---- Suche über alle Kategorien ---- */
+function _esc(t) { return String(t).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
+function runSearch(q) {
+  const box = document.getElementById("searchResults"); if (!box) return;
+  const tokens = q.toLowerCase().split(/\s+/).filter(Boolean);
+  if (q.trim().length < 2) { box.innerHTML = ""; return; }
+  const hits = [];
+  CATEGORIES.forEach(c => {
+    const cfg = CATALOG[c.key]; if (!c.ready || !cfg) return;
+    cfg.products.forEach(p => { if (!p) return; const n = p.name.toLowerCase(); if (tokens.every(t => n.includes(t))) hits.push({ p, cat: c.name }); });
+  });
+  if (!hits.length) { box.innerHTML = '<p class="sr-empty">Kein Treffer. Wähle unten eine Kategorie für eine persönliche Empfehlung.</p>'; return; }
+  box.innerHTML = hits.slice(0, 8).map(h => `<a class="sr-item" href="${_esc(productUrl(h.p))}" target="_blank" rel="sponsored noopener noreferrer">
+      <span class="sr-name">${_esc(h.p.name)}</span><span class="sr-meta">${_esc(h.cat)} · ab ${h.p.price} €</span></a>`).join("")
+    + (hits.length > 8 ? `<p class="sr-empty">+ ${hits.length - 8} weitere Treffer, Suche verfeinern.</p>` : "");
+}
+let resultsShown = 5, brandFilter = null, _brandList = [], compareIds = [], _favMem = null;
+
+/* ---- Merkliste, Vergleich, Markenfilter ---- */
+function getFavs() {
+  if (_favMem === null) { try { _favMem = JSON.parse(localStorage.getItem("tk_favs") || "[]"); } catch (e) { _favMem = []; } }
+  return _favMem;
+}
+function findProduct(id) { for (const c of CATEGORIES) { const cfg = CATALOG[c.key]; if (!c.ready || !cfg) continue; const p = cfg.products.find(x => x && x.id === id); if (p) return p; } return null; }
+function catOf(id) { for (const c of CATEGORIES) { const cfg = CATALOG[c.key]; if (c.ready && cfg && cfg.products.some(x => x && x.id === id)) return c.key; } return null; }
+function updateFavCount() { const el = document.getElementById("favCount"); if (el) el.textContent = getFavs().length ? " (" + getFavs().length + ")" : ""; }
+function toggleFav(id) {
+  const a = getFavs(), i = a.indexOf(id); if (i >= 0) a.splice(i, 1); else a.push(id);
+  try { localStorage.setItem("tk_favs", JSON.stringify(a)); } catch (e) {}
+  const on = i < 0;
+  document.querySelectorAll('[data-fav="' + id + '"]').forEach(b => { b.classList.toggle("on", on); b.textContent = on ? "♥ Gemerkt" : "♡ Merken"; });
+  updateFavCount();
+}
+function syncCmp() { document.querySelectorAll("[data-cmp]").forEach(b => b.classList.toggle("on", compareIds.includes(b.dataset.cmp))); }
+function toggleCompare(id) {
+  const i = compareIds.indexOf(id);
+  if (i >= 0) compareIds.splice(i, 1);
+  else { if (compareIds.length && catOf(compareIds[0]) !== catOf(id)) compareIds = []; if (compareIds.length >= 3) compareIds.shift(); compareIds.push(id); }
+  syncCmp(); updateBar();
+}
+function updateBar() {
+  let bar = document.getElementById("compareBar");
+  if (!bar) { bar = document.createElement("div"); bar.id = "compareBar"; bar.className = "compare-bar"; document.body.appendChild(bar); }
+  const show = compareIds.length > 0 && (screen === "results" || screen === "favs");
+  bar.style.display = show ? "flex" : "none";
+  if (show) bar.innerHTML = `<span>${compareIds.length}/3 zum Vergleich</span><button class="tool-btn on" ${compareIds.length < 2 ? "disabled" : ""} onclick="showCompare()">Vergleichen →</button><button class="tool-btn" onclick="compareIds = []; syncCmp(); updateBar();">Leeren</button>`;
+}
+function showCompare() { screen = "compare"; navDirection = "forward"; render(); }
+function showFavs() { screen = "favs"; navDirection = "forward"; render(); }
+function setBrand(i) { brandFilter = i < 0 ? null : _brandList[i]; resultsShown = 5; noScrollOnce = true; render(); }
+function toolsHtml(p) {
+  const f = getFavs().includes(p.id), c = compareIds.includes(p.id);
+  return `<div class="card-tools"><button class="tool-btn${f ? " on" : ""}" data-fav="${p.id}" onclick="toggleFav('${p.id}')">${f ? "♥ Gemerkt" : "♡ Merken"}</button><button class="tool-btn${c ? " on" : ""}" data-cmp="${p.id}" onclick="toggleCompare('${p.id}')">⇄ Vergleichen</button></div>`;
+}
+function amazonLink(p, label) { return `<a class="cta-btn" href="${_esc(productUrl(p))}" target="_blank" rel="sponsored noopener noreferrer">${label || "Bei Amazon ansehen →"}</a>`; }
+function renderCompare(app) {
+  const items = compareIds.map(findProduct).filter(Boolean);
+  const keys = [...new Set(items.flatMap(p => Object.keys(p.scores)))];
+  const minPrice = Math.min(...items.map(p => p.price));
+  const rows = keys.map(k => { const v = items.map(p => p.scores[k]), mx = Math.max(...v.filter(x => x != null));
+    return `<tr><th>${SPEC_LABELS[k] || k}</th>${v.map(x => `<td class="${x != null && x === mx && items.length > 1 ? "best" : ""}">${x != null ? x + "/10" : "–"}</td>`).join("")}</tr>`; }).join("");
+  app.innerHTML = `<h2 class="q-title fade-in">Vergleich</h2>
+    <div class="cmp-wrap fade-in"><table class="cmp-table">
+      <tr><th></th>${items.map(p => `<td class="cmp-name">${_esc(p.name)}</td>`).join("")}</tr>
+      <tr><th>Preis</th>${items.map(p => `<td class="${p.price === minPrice && items.length > 1 ? "best" : ""}">ab ${formatPrice(p.price)} €</td>`).join("")}</tr>
+      ${rows}
+      <tr><th>Stärken</th>${items.map(p => `<td class="cmp-small">${p.pros.slice(0, 2).map(_esc).join("<br>")}</td>`).join("")}</tr>
+      <tr><th>Schwäche</th>${items.map(p => `<td class="cmp-small">${p.cons.slice(0, 1).map(_esc).join("")}</td>`).join("")}</tr>
+      <tr><th></th>${items.map(p => `<td>${amazonLink(p, "Amazon →")}</td>`).join("")}</tr>
+    </table></div>
+    <p class="price-disclaimer">Preise sind Richtwerte (Stand: November 2026). Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p>
+    <div class="result-actions"><button class="reset-btn" onclick="history.back()">← Zurück</button></div>`;
+}
+function renderFavs(app) {
+  const items = getFavs().map(findProduct).filter(Boolean);
+  app.innerHTML = `<h2 class="q-title fade-in">Deine Merkliste</h2>` + (items.length ? items.map(p => `
+    <div class="fav-item fade-in"><div><span class="sr-name">${_esc(p.name)}</span><span class="sr-meta">ab ${formatPrice(p.price)} €</span></div>
+    <div class="fav-actions"><a class="tool-btn" href="${_esc(productUrl(p))}" target="_blank" rel="sponsored noopener noreferrer">Amazon →</a>
+    <button class="tool-btn${compareIds.includes(p.id) ? " on" : ""}" data-cmp="${p.id}" onclick="toggleCompare('${p.id}')">⇄</button>
+    <button class="tool-btn" onclick="toggleFav('${p.id}'); noScrollOnce = true; render();">Entfernen</button></div></div>`).join("")
+    : `<p class="q-sub">Noch nichts gemerkt. Tippe bei einem Ergebnis auf „Merken".</p>`)
+    + `<div class="result-actions"><button class="reset-btn" onclick="reset()">← Zur Startseite</button></div>`;
 }
 
 const CALC_VERBS = ["Vergleiche", "Prüfe", "Analysiere", "Werte aus"];
@@ -4415,23 +4580,27 @@ function renderNow() {
         <span class="cat-tag">${c.tag}</span>
       </div>`).join("");
     app.innerHTML = `
-      <div class="stats-bar fade-in">
+      <div class="search-box fade-in">
+        <input id="siteSearch" type="search" placeholder="Modell suchen, z. B. Galaxy S25 oder AirPods" autocomplete="off" aria-label="Produkt suchen" oninput="runSearch(this.value)" />
+        <div id="searchResults" class="search-results" aria-live="polite"></div>
+      </div>
+      <div class="cat-grid">${cards}</div>
+      <div class="stats-bar stats-compact fade-in">
         <div class="stat"><span class="stat-num count-up" data-target="${totalProducts}">0</span><span class="stat-label">Produkte</span></div>
         <div class="stat-divider"></div>
         <div class="stat"><span class="stat-num count-up" data-target="${CATEGORIES.length}">0</span><span class="stat-label">Kategorien</span></div>
         <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-num count-up" data-target="100">0</span><span class="stat-num" style="font-size:16px;">%</span><span class="stat-label">Unabhängig</span></div>
+        <div class="stat"><span class="stat-num">~1 Min</span><span class="stat-label">Fragebogen</span></div>
       </div>
-      <div class="cat-grid">${cards}</div>
       <div class="trust-grid fade-in">
         <div class="trust-item">
           <span class="trust-icon"><svg viewBox="0 0 24 24" stroke-width="1.4"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9.5C7.5 20.5 4 17 4 12V7l8-4z"/><path d="M9 12l2 2 4-4" stroke-width="1.6"/></svg></span>
-          <span class="trust-title">Unabhängig getestet</span>
-          <span class="trust-desc">Bewertung nach Testdaten, keine bezahlten Platzierungen</span>
+          <span class="trust-title">Nach Testdaten bewertet</span>
+          <span class="trust-desc">Bewertung nach öffentlichen Testdaten und Herstellerangaben</span>
         </div>
         <div class="trust-item">
           <span class="trust-icon"><svg viewBox="0 0 24 24" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
-          <span class="trust-title">Immer aktuell</span>
+          <span class="trust-title">Regelmäßig aktualisiert</span>
           <span class="trust-desc">Datenbank wird laufend um neue Modelle erweitert</span>
         </div>
         <div class="trust-item">
@@ -4440,11 +4609,19 @@ function renderNow() {
           <span class="trust-desc">Kurzer Fragebogen statt endlosem Vergleichen</span>
         </div>
       </div>
-      <p class="method-note fade-in">Jede Empfehlung basiert auf öffentlich zugänglichen Testdaten und Herstellerangaben, gewichtet nach deinen Antworten — keine bezahlten Platzierungen.</p>`;
+      <p class="method-note fade-in">Jede Empfehlung basiert auf öffentlich zugänglichen Testdaten und Herstellerangaben, gewichtet nach deinen Antworten. Die Reihenfolge richtet sich nach deinen Antworten, nicht nach Provision.</p>
+      <details class="how-we-rate fade-in">
+        <summary>Wie wir bewerten</summary>
+        <p>Jedes Produkt erhält pro Kriterium (z. B. Leistung, Akku, Display) eine Note von 0 bis 10. Grundlage sind veröffentlichte Tests, Messwerte und Herstellerangaben.</p>
+        <p>Deine Antworten im Fragebogen bestimmen, wie stark jedes Kriterium zählt. Daraus ergibt sich die Reihenfolge der Ergebnisse.</p>
+        <p>Preise sind Richtwerte (Stand: November 2026). Bei Käufen über Amazon-Links erhalten wir ggf. eine Provision; für dich ändert sich der Preis nicht.</p>
+      </details>`;
     animateCountUps();
     return;
   }
 
+  if (screen === "compare") { renderCompare(app); return; }
+  if (screen === "favs") { renderFavs(app); return; }
   if (screen === "soon") {
     app.innerHTML = `
       <div class="soon-box fade-in">
@@ -4539,9 +4716,12 @@ function renderNow() {
   }
 
   if (screen === "results") {
-    const allMatches = computeMatches();
-    const RESULTS_TO_SHOW = 5;
-    let results = allMatches.slice(0, RESULTS_TO_SHOW);
+    const rawMatches = computeMatches();
+    const _bc = {}; rawMatches.forEach(m => { const b = m.name.split(" ")[0]; _bc[b] = (_bc[b] || 0) + 1; });
+    _brandList = Object.keys(_bc).filter(b => _bc[b] >= 2).sort((a, b) => _bc[b] - _bc[a]).slice(0, 6);
+    if (brandFilter && !_bc[brandFilter]) brandFilter = null;
+    const allMatches = brandFilter ? rawMatches.filter(m => m.name.split(" ")[0] === brandFilter) : rawMatches;
+    let results = allMatches.slice(0, resultsShown);
     const bestMatchId = allMatches.length ? allMatches[0].id : null;
     if (resultSortMode === "price-asc") results = [...results].sort((a,b)=> a.price - b.price);
     else if (resultSortMode === "price-desc") results = [...results].sort((a,b)=> b.price - a.price);
@@ -4579,8 +4759,10 @@ function renderNow() {
         ${sortBtn('price-asc', 'Preis ↑')}
         ${sortBtn('price-desc', 'Preis ↓')}
       </div>
+      ${_brandList.length > 1 ? `<div class="brand-bar fade-in"><span class="sort-label">Marke:</span><button class="sort-btn${!brandFilter ? " sort-btn-active" : ""}" onclick="setBrand(-1)">Alle</button>${_brandList.map((b, i) => `<button class="sort-btn${brandFilter === b ? " sort-btn-active" : ""}" onclick="setBrand(${i})">${_esc(b)}</button>`).join("")}</div>` : ""}
       ${cardsHtml}
-      <p class="price-disclaimer fade-in">Preise sind Richtwerte (inkl. MwSt.) und können sich ändern. Maßgeblich ist der aktuelle Preis auf Amazon.de. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p>
+      ${allMatches.length > resultsShown ? `<div class="more-wrap"><button class="cta-btn-secondary" onclick="resultsShown += 5; noScrollOnce = true; render();">Mehr Treffer anzeigen (${allMatches.length - resultsShown} weitere)</button></div>` : ""}
+      <p class="price-disclaimer fade-in">Preise sind Richtwerte (inkl. MwSt., Stand: November 2026) und können sich ändern. Maßgeblich ist der aktuelle Preis auf Amazon.de. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p>
       <div class="result-actions fade-in">
         <button class="cta-btn-secondary" onclick="shareResults(event)">↗ Ergebnis teilen</button>
         <button class="reset-btn" onclick="reset()">← Andere Kategorie wählen</button>

@@ -11,7 +11,11 @@
 <meta property="og:url" content="https://techkompass24.de/" />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="de_DE" />
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:image" content="https://techkompass24.de/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:image" content="https://techkompass24.de/og-image.png" />
 <meta name="twitter:title" content="TechKompass — Redaktionelle Kaufberatung" />
 <meta name="twitter:description" content="Finde in wenigen Fragen die richtige Technik für dich — Empfehlungen auf Basis öffentlicher Testdaten." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='42' fill='%230B0B0D' stroke='%23FF9900' stroke-width='5'/%3E%3Cpath d='M50 16 L44 50 L50 84 L56 50 Z' fill='%23FF9900'/%3E%3Cpath d='M50 16 L44 50 L50 50 Z' fill='%23FFC300'/%3E%3Ccircle cx='50' cy='50' r='5' fill='%230B0B0D' stroke='%23FF9900' stroke-width='2.5'/%3E%3C/svg%3E" />
@@ -869,6 +873,9 @@
       <p style="font-size:14px; line-height:1.6;">TechKompass ist ein interaktiver Kaufberater und benötigt aktiviertes JavaScript, um zu funktionieren. Bitte aktiviere JavaScript in deinem Browser und lade die Seite neu.</p>
     </div>
   </noscript>
+  <div class="bf-banner" role="note" style="margin:0 auto 18px; max-width:720px; padding:12px 16px; border:1px solid #FF9900; border-radius:12px; background:rgba(255,153,0,0.08); color:#EDE9E3; font-size:14px; line-height:1.5; text-align:center;">
+    <strong style="color:#FF9900;">Black-Friday-Woche:</strong> Bei Amazon ändern sich die Preise gerade fast täglich. Die Preise hier sind Richtwerte – den aktuellen Preis und alle Angebote siehst du immer direkt bei Amazon.
+  </div>
   <div id="app" aria-live="polite"></div>
   <div id="stickyCta" class="sticky-cta" aria-hidden="true">
     <div class="sticky-cta-info">
@@ -884,7 +891,8 @@
   <p>Als Amazon-Partner verdiene ich an qualifizierten Verkäufen. Enthält Affiliate-Links: Kaufst du über einen Link, erhalten wir ggf. eine Provision — für dich ändert sich der Preis nicht.</p>
   <p>Alle Preise sind Richtwerte inkl. MwSt. und können sich ändern. Maßgeblich ist der aktuelle Preis auf Amazon.de zum Zeitpunkt des Kaufs.</p>
   <p id="footerStats" style="opacity:0.6; font-size:11px;"></p>
-  <p style="opacity:0.35; font-size:10px;">Version 1. 11. 2026 (b)</p>
+  <p style="opacity:0.35; font-size:10px;">Version 18. 11. 2026</p>
+  <p>Übersichten: <a href="handys-unter-300-euro.html">Handys unter 300 €</a> · <a href="kopfhoerer-unter-100-euro.html">Kopfhörer unter 100 €</a> · <a href="fitnesstracker-vergleich.html">Fitnesstracker</a> · <a href="powerbanks-vergleich.html">Powerbanks</a></p>
   <p><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a> · <a href="kontakt.html">Kontakt</a></p>
 </footer>
 
@@ -1001,11 +1009,11 @@ const PHONES = [
     pros:["Sehr starke Leistung dank Snapdragon 8 Elite, helles AMOLED (bis 8.000 Nits)", "Gute Haupt- und Zoomkamera, wasserdicht nach IP69, ordentliche Lautsprecher", "Sechs Jahre Android- und Sicherheitsupdates, 6.400 mAh Akku mit schnellem Laden"],
     cons:["UVP von 999 € zu hoch, Rückseite aus Kunststoff statt Glas", "Kein vollwertiges Always-on-Display, nicht abwählbare Werbe-Apps bei der Einrichtung", "Akkulaufzeit im Test nur okay (rund 16,5 Stunden bei PCMark)"],
     blurb:"Mittelklasse-Handy mit Flaggschiff-Chip und 200-MP-Kamera, bei Amazon deutlich unter der UVP." },
-  { id:"p19", name:"Google Pixel 9", price:439, img:"", asin:"DEINE-ASIN-HIER", type:"standard",
+  { id:"p19", name:"Google Pixel 9", price:500, img:"", asin:"DEINE-ASIN-HIER", type:"standard",
     scores:{kamera:8.5, akku:8, leistung:7.5, display:8},
-    pros:["Kamera: sehr gut (8.5/10 in unserer Wertung)", "Akku: sehr gut (8/10 in unserer Wertung)"],
-    cons:["Keine klare Schwäche in unserer Wertung"],
-    blurb:"Kompakt, gute Kamera, langer Software-Support." },
+    pros:["Hervorragende Kamera mit vielen KI-Fotofunktionen, superhelles OLED-Display", "Lange Akkulaufzeit, flotte Alltagsleistung, IP68 und handliches Gehäuse", "Sieben Jahre Android- und Sicherheitsupdates (bis 2031)"],
+    cons:["Kein Teleobjektiv, nur digitaler Zoom", "Tensor G4 bei anspruchsvollen Spielen limitiert, gelegentlich Überhitzung", "Langsames Laden (27 W) und nur 128 GB Einstiegsspeicher, einige KI-Funktionen in Deutschland eingeschränkt"],
+    blurb:"Kompaktes Foto-Handy mit purem Android und sieben Jahren Updates, bei Amazon deutlich unter der UVP." },
   { id:"p20", name:"Xiaomi 15T", price:399, img:"", asin:"DEINE-ASIN-HIER", type:"standard",
     scores:{kamera:8.5, akku:8, leistung:8.5, display:8.5},
     pros:["Hohes Tempo, sehr hohe Ausdauer, großes helles Display", "Gute Kamera, IP68, leicht und dünn"],
@@ -1071,11 +1079,11 @@ const PHONES = [
     pros:["Sehr lange Akkulaufzeit (6.580 mAh, über 30 Stunden WLAN) und IP68", "Sehr helles AMOLED (rund 1.155 cd/m²), 200-MP-Hauptkamera", "Vier große Android-Updates und sechs Jahre Sicherheits-Updates"],
     cons:["Werbung in System-Apps, anfangs nur Android 15", "8-MP-Weitwinkel rauscht nachts, nur USB 2.0, kein microSD", "Lädt langsam (kabellos gar nicht), Leistung bei anspruchsvollen Spielen begrenzt"],
     blurb:"200-MP-Kamera und starkes OLED-Display, aber Nachschärfung teils zu stark." },
-  { id:"p33", name:"Poco X7 Pro", price:290, img:"", asin:"DEINE-ASIN-HIER", type:"standard",
+  { id:"p33", name:"Poco X7 Pro", price:300, img:"", asin:"DEINE-ASIN-HIER", type:"standard",
     scores:{kamera:6.5, akku:7.5, leistung:7.5, display:7},
-    pros:["Stärkster Bereich: Akku (7.5/10)"],
-    cons:["Schwächster Bereich: Kamera (6.5/10 in unserer Wertung)"],
-    blurb:"Guter Allrounder mit überdurchschnittlicher Performance fürs Geld." },
+    pros:["Exzellente Leistung auf Flaggschiff-Niveau dank Dimensity 8400-Ultra, 120-Hz-AMOLED", "Großer 6.000-mAh-Akku mit 90-Watt-Laden und sehr guter Laufzeit", "IP68, Android-Updates bis 2029 und Preis unter 300 € bei Amazon"],
+    cons:["Kein kabelloses Laden und kein eSIM-Support", "Kein Netzteil im Lieferumfang, Kunstleder-Rückseite", "Unspektakuläre Dual-Kamera, Videofunktionen nur mittelmäßig"],
+    blurb:"Performance-Überflieger unter 300 € mit Top-Display, aber ohne Premium-Extras." },
   { id:"p34", name:"Xiaomi 17T", price:498, img:"", asin:"DEINE-ASIN-HIER", type:"standard",
     scores:{kamera:8, akku:8, leistung:8, display:8},
     pros:["Starkes Kamerasetup mit exzellentem 5-fach-Zoom", "Tolles 120-Hz-AMOLED und sehr gute Akkulaufzeit dank 6.500 mAh", "Kompakt (ca. 200 g), IP68, solide Rechenleistung"],
@@ -1141,11 +1149,11 @@ const PHONES = [
     pros:["Ausdauer-Champion mit 5.200-mAh-Akku, in rund 1:18 Stunden voll geladen", "IP68/IP69-geschützt, 3,5-mm-Klinke und microSD-Slot", "Günstige Mittelklasse mit guten Kaufargumenten"],
     cons:["IPS-Display schwächer, Schwächen bei der Helligkeit", "Nicht besonders langer OS-Support", "Wechselhafte Performance"],
     blurb:"Solides Einsteiger-5G-Handy mit gutem Preis-Leistungs-Verhältnis." },
-  { id:"p47", name:"Samsung Galaxy A26 5G", price:185, img:"", asin:"DEINE-ASIN-HIER", type:"standard",
+  { id:"p47", name:"Samsung Galaxy A26 5G", price:200, img:"", asin:"DEINE-ASIN-HIER", type:"standard",
     scores:{kamera:6, akku:7.5, leistung:6, display:7},
-    pros:["Stärkster Bereich: Akku (7.5/10)"],
-    cons:["Schwächster Bereich: Leistung (6/10 in unserer Wertung)"],
-    blurb:"Zuverlässiger Samsung-Einstieg mit langer Update-Zusage." },
+    pros:["Sechs Jahre Updates (bis 2031), IP67 und Gorilla Glass Victus", "Großes 6,7-Zoll-Super-AMOLED mit 120 Hz, microSD-Slot (bis 2 TB)", "Gute Verarbeitung, bei Amazon ab ca. 190–230 € (UVP 299 €)"],
+    cons:["Nur mäßige Akkulaufzeit trotz 5.000 mAh", "Kunststoffgehäuse zeigt Fingerabdrücke, Zoom-Fotos kaum brauchbar", "Kein Netzteil im Lieferumfang, keine Kopfhörerbuchse, Exynos 1380 mit kleinen Leistungseinbußen"],
+    blurb:"Solides Einsteiger-Samsung mit langem Update-Support, Nachfolger Galaxy A27 bereits erschienen." },
   { id:"p48", name:"Google Pixel 10 Pro", price:705, img:"", asin:"DEINE-ASIN-HIER", type:"standard",
     scores:{kamera:9, akku:8, leistung:7.5, display:8.5},
     pros:["Kamera der Extraklasse, sehr gute Fotos auch bei wenig Licht", "Sehr helles Display (bis 3.000 cd/m²) und magnetisches Qi2-Laden", "Sieben Jahre Updates, viele nützliche KI-Funktionen", "Über 24 Stunden Akkulaufzeit laut Google"],
@@ -1740,7 +1748,7 @@ const HEADPHONES = [
     pros:["Ansprechender Klang, relativ gutes ANC ohne Silikonaufsätze", "Kompakt, sehr gute Integration mit Apple-Geräten, Pinch- und Nick-Gesten"],
     cons:["Schwacher Akku (rund 4 Stunden mit ANC)", "Einige Funktionen fehlen mit Android-Geräten"],
     blurb:"Offene In-Ear-Bauform mit iOS-Komfortfunktionen." },
-  { id:"h7", name:"Samsung Galaxy Buds3 Pro", price:200, img:"", asin:"DEINE-ASIN-HIER", type:"in-ear",
+  { id:"h7", name:"Samsung Galaxy Buds3 Pro", price:170, img:"", asin:"DEINE-ASIN-HIER", type:"in-ear",
     scores:{klang:8, akku:6.5, anc:8, komfort:7.5},
     pros:["Klang: sehr gut (8/10 in unserer Wertung)", "Geräuschunterdrückung: sehr gut (8/10 in unserer Wertung)"],
     cons:["Schwächster Bereich: Akku (6.5/10 in unserer Wertung)"],
@@ -1920,11 +1928,21 @@ const HEADPHONES = [
     pros:["Komfort: sehr gut (9/10 in unserer Wertung)"],
     cons:["Schwächster Bereich: Geräuschunterdrückung (2/10 in unserer Wertung)"],
     blurb:"Offene Ohrhörer speziell für Sport und Umgebungswahrnehmung." },
+  { id:"h305", name:"Beats Powerbeats Pro 2", price:225, img:"", asin:"DEINE-ASIN-HIER", type:"in-ear",
+    scores:{klang:8, akku:8.5, anc:8, komfort:9},
+    pros:["Sicherer Sitz dank Ohrbügel, ideal für Sport (IPX4)", "Herzfrequenzmessung im Ohr, bis zu 45 Stunden Akku mit Case (rund 10 Stunden ohne)", "Sehr gutes ANC, Transparenzmodus und Dolby Atmos, für iPhone und Android"],
+    cons:["Hoher Preis (UVP 299,95 €), bei Amazon rund 208–228 €", "Kein LDAC oder LHDC, nur AAC und SBC, kein Multipoint", "Transparenzmodus nicht perfekt, Pulsmessung läuft nicht parallel zur Apple Watch, Ladekabel nicht im Lieferumfang"],
+    blurb:"Beste Sport-In-Ears mit Ohrbügel, Pulsmessung und starker Laufzeit, aber teuer." },
   { id:"h44", name:"Beyerdynamic Aventho 300", price:350, img:"", asin:"DEINE-ASIN-HIER", type:"over-ear",
     scores:{klang:9, akku:7, anc:6.5, komfort:7.5},
     pros:["Klang: sehr gut (9/10 in unserer Wertung)"],
     cons:["Schwächster Bereich: Geräuschunterdrückung (6.5/10 in unserer Wertung)"],
     blurb:"Audiophiler Klang von einem traditionsreichen Hersteller." },
+  { id:"h304", name:"Beyerdynamic Free Byrd", price:199, img:"", asin:"DEINE-ASIN-HIER", type:"in-ear",
+    scores:{klang:8.5, akku:7, anc:6.5, komfort:7.5},
+    pros:["Lebendiger, detailreicher Klang mit Sound-Personalisierung in der App", "IP57-wasserfest, acht Ohrpassstücke, kabelloses Laden und gute Mikrofone", "Lange Laufzeit (laut Hersteller bis 11 Stunden), bei Amazon unter der UVP von 229 €"],
+    cons:["Eher dezentes Noise Cancelling", "Kein editierbarer Equalizer, Höhen teils etwas spitz", "Große, dicke Ohrhörer und Case, relativ hoher Preis"],
+    blurb:"Klangstarke True-Wireless-In-Ears vom deutschen Hersteller, ANC aber nicht Spitzenklasse." },
   { id:"h45", name:"Sony LinkBuds Open", price:170, img:"", asin:"DEINE-ASIN-HIER", type:"in-ear",
     scores:{klang:6.5, akku:6, anc:2, komfort:9},
     pros:["Komfort: sehr gut (9/10 in unserer Wertung)"],
@@ -2105,11 +2123,11 @@ const HEADPHONES = [
     pros:["Akku: sehr gut (9.5/10 in unserer Wertung)", "Klang: sehr gut (9/10 in unserer Wertung)"],
     cons:["Keine klare Schwäche in unserer Wertung"],
     blurb:"Der beliebte Vorgänger des XM6 zum Schnäppchenpreis." },
-  { id:"h78", name:"Samsung Galaxy Buds3 FE", price:77, img:"", asin:"DEINE-ASIN-HIER", type:"in-ear",
+  { id:"h78", name:"Samsung Galaxy Buds3 FE", price:70, img:"", asin:"DEINE-ASIN-HIER", type:"in-ear",
     scores:{klang:7.5, akku:7.5, anc:7.5, komfort:8},
-    pros:["Komfort: sehr gut (8/10 in unserer Wertung)"],
-    cons:["Keine klare Schwäche in unserer Wertung"],
-    blurb:"Preiswerte Fan-Edition der Buds3." }
+    pros:["Sehr guter Sound und kompetentes ANC, im hifi.de-Test 88/100 Punkte", "Dolmetscher-Funktion und weitere Funktionen mit Galaxy-Smartphone", "Bei Amazon oft um 70–75 € (UVP 149 €), IP54-Schutz"],
+    cons:["Kein LDAC oder aptX, nur Bluetooth 5.4", "Keine App für iOS, einige Features Samsung-exklusiv", "Kein kabelloses Laden"],
+    blurb:"Sehr günstige ANC-In-Ears für Samsung-Nutzer, mit starkem Preis-Leistungs-Verhältnis." }
 ];
 
 const HEADPHONE_QUESTIONS = [
@@ -2243,6 +2261,16 @@ const LAPTOPS = [
     pros:["Sehr lange Akkulaufzeit (im Chip-Test knapp 14 Stunden beim Websurfen)", "Snapdragon X2 Elite mit Copilot+, 3:2-Touchdisplay mit 120 Hz, zwei USB4 plus USB-A", "Leichtes Aluminiumgehäuse (1,36 kg), Gesamtbewertung 84–85 von 100 Punkten"],
     cons:["Hoher Preis (UVP ab ca. 2.100 €), bei Amazon zuletzt ab ca. 1.550–1.560 €", "Optisch und technisch kaum verändert gegenüber dem Surface Laptop 7", "ARM-Chip: nicht jede Windows-Software läuft nativ"],
     blurb:"Eleganter, leichter Windows-Laptop mit Top-Akku, im Preis aber nur im Angebot attraktiv." },
+  { id:"l304", name:"Dell XPS 14 (2026)", price:1699, img:"", asin:"DEINE-ASIN-HIER", type:"business",
+    scores:{leistung:8.5, akku:9.5, display:8.5, mobilitaet:8.5},
+    pros:["Herausragende Akkulaufzeit (rund 20 Stunden im Test), schlägt im Netzwelt-Test sogar das MacBook Pro", "Leicht (ca. 1,4 kg), hochwertiges Aluminiumgehäuse, leise, optional Tandem-OLED", "Besseres Touchpad und Tastatur mit physischer Funktionsreihe, Intel Panther Lake mit starker Arc-Grafik"],
+    cons:["Kein microSD-Leser und kein Kamera-Shutter, nur USB-C (3× Thunderbolt 4)", "Tastenfeedback weiterhin flach, Turbo Boost eingeschränkt", "Preis je nach Konfiguration: bei Amazon ca. 1.700 €, bei Dell ab 2.400 €"],
+    blurb:"Das XPS ist zurück: leichter Premium-Laptop mit Top-Akku, aber ohne Kartenleser und mit hohem Preis." },
+  { id:"l305", name:"Lenovo Yoga 7i 2-in-1 14 (2026)", price:1199, img:"", asin:"DEINE-ASIN-HIER", type:"business",
+    scores:{leistung:8, akku:8.5, display:9, mobilitaet:8},
+    pros:["Im Testberichte-Vergleich \"Sehr gut\" (Note 1,4), kompaktes Design mit starkem Prozessor", "Helles OLED-Touchdisplay und 360-Grad-Scharnier (Convertible)", "Laut Wirecutter-Test (Sep. 2026) bestes Windows-Notebook für die meisten Menschen: Leistung und Akkulaufzeit überzeugen"],
+    cons:["Preis von rund 1.200 € bei Amazon nicht günstig", "Je nach Konfiguration unterscheiden sich Prozessor, RAM und Preis stark"],
+    blurb:"Vielseitiges 2-in-1 mit OLED-Display, gut für Alltag, Uni und Büro." },
   { id:"l23", name:"HP Omen Transcend 14", price:1700, img:"", asin:"DEINE-ASIN-HIER", type:"gaming",
     scores:{leistung:9, akku:6.5, display:8.5, mobilitaet:7},
     pros:["Leistung: sehr gut (9/10 in unserer Wertung)", "Display: sehr gut (8.5/10 in unserer Wertung)"],
@@ -2416,6 +2444,11 @@ const POWERBANKS = [
     pros:["Kapazität: sehr gut (8/10 in unserer Wertung)"],
     cons:["Schwächster Bereich: Mobilität (6.5/10 in unserer Wertung)"],
     blurb:"Preis-Leistungs-Sieger unter den großen Powerbanks." },
+  { id:"pb52", name:"Ugreen Nexode 67W Powerbank (20.000mAh)", price:40, img:"", asin:"DEINE-ASIN-HIER", type:"allrounder",
+    scores:{kapazitaet:8, ladeleistung:8, mobilitaet:7, ausstattung:8},
+    pros:["Preis-Leistungs-Tipp im Smartzone-Test (ca. 40 €), gute Nettokapazität", "67 W Power Delivery und HyperCharge für Xiaomi, Poco und Redmi, sehr guter PPS-Support", "Integriertes Kabel, viele Ladeprotokolle und konstante Leistung"],
+    cons:["Keine 21-Volt-PPS-Unterstützung", "Die Powerbank selbst lädt vergleichsweise langsam wieder auf"],
+    blurb:"Solider Allrounder mit 67 W und integriertem Kabel zum fairen Preis." },
   { id:"pb6", name:"Anker 25K Powerbank 165W", price:85, img:"", asin:"DEINE-ASIN-HIER", type:"high-capacity",
     scores:{kapazitaet:9.5, ladeleistung:9, mobilitaet:5.5, ausstattung:8},
     pros:["Kapazität: sehr gut (9.5/10 in unserer Wertung)", "Ladeleistung: sehr gut (9/10 in unserer Wertung)"],
@@ -2654,12 +2687,12 @@ const BT_SPEAKERS = [
     pros:["Testsieger-Allrounder mit IP68, extrem robust", "Bis zu 28 Stunden Akku, Auracast und Powerbank-Funktion"],
     cons:["Mit ca. 990 g recht schwer", "Kein Klinkenanschluss"],
     blurb:"Der beliebteste Allrounder (UVP 199 €, oft günstiger)." },
-  { id:"bt2", name:"Marshall Emberton III", price:169, img:"", asin:"DEINE-ASIN-HIER", type:"allrounder",
+  { id:"bt2", name:"Marshall Emberton III", price:145, img:"", asin:"DEINE-ASIN-HIER", type:"allrounder",
     scores:{klang:8, akku:9.5, robustheit:8.5, mobilitaet:7.5},
     pros:["Über 30 Stunden Akku", "Ikonisches Design mit IP67"],
     cons:["Klang für größere Räume begrenzt"],
     blurb:"Stilvoller Reisebegleiter mit sehr langer Laufzeit." },
-  { id:"bt3", name:"Bose SoundLink Flex (2. Gen.)", price:149, img:"", asin:"DEINE-ASIN-HIER", type:"allrounder",
+  { id:"bt3", name:"Bose SoundLink Flex (2. Gen.)", price:130, img:"", asin:"DEINE-ASIN-HIER", type:"allrounder",
     scores:{klang:8.5, akku:7, robustheit:8.5, mobilitaet:8},
     pros:["Sehr ausgewogener Klang", "Kompakt, wasser- und staubdicht (IP67)"],
     cons:["Laufzeit nur rund 10 Stunden gemessen"],
@@ -3249,6 +3282,11 @@ const TABLETS = [
     pros:["Leistung: sehr gut (9.5/10 in unserer Wertung)", "Display: sehr gut (9.5/10 in unserer Wertung)"],
     cons:["Hoher Anschaffungspreis", "Vorgängermodell: Nachfolger iPad Pro M5 bereits erhältlich"],
     blurb:"Apples Top-Tablet mit unerreichter Verarbeitungsqualität." },
+  { id:"t35", name:"Apple iPad Pro (M5, 11 Zoll)", price:959, img:"", asin:"DEINE-ASIN-HIER", type:"premium-pro",
+    scores:{leistung:10, akku:8.5, display:9.5, mobilitaet:8},
+    pros:["Tandem-OLED mit 120 Hz und 1.600 Nits, M5-Chip mit 12 GB RAM (rund 16.400 Punkte im Geekbench Multicore)", "Wi-Fi 7 und 5G per eSIM, Thunderbolt-Anschluss, leichter und dünner als das iPad Air", "Testnote 1,2 bei billiger.de, bei Amazon bereits ab ca. 959–989 € (UVP 1.099 €)"],
+    cons:["Sehr hoher Preis, Pencil Pro (149 €) und Magic Keyboard (349 €) kosten extra", "Für Besitzer des M4-Modells lohnt der Wechsel nicht, Speicher nicht erweiterbar", "Schwächen bei den Kameras, nur die teuren Varianten haben alle Features"],
+    blurb:"Schnellstes Tablet auf dem Markt mit Tandem-OLED, aber teuer und für M4-Besitzer kein Muss." },
   { id:"t3", name:"Apple iPad Air (M3, 11 Zoll)", price:499, img:"", asin:"DEINE-ASIN-HIER", type:"premium-pro",
     scores:{leistung:8.5, akku:8.5, display:8.5, mobilitaet:8},
     pros:["Leistung: sehr gut (8.5/10 in unserer Wertung)", "Akku: sehr gut (8.5/10 in unserer Wertung)"],
@@ -3472,6 +3510,26 @@ const SMARTWATCHES = [
     pros:["Sehr günstiger Einstieg mit erstaunlich viel Funktionsumfang", "Lange Akkulaufzeit auch im Budget-Segment"],
     cons:["Weniger präzise Sensoren als Premium-Modelle"],
     blurb:"Bestes Preis-Leistungs-Verhältnis für Fitness-Tracking-Einsteiger." },
+  { id:"w28", name:"Xiaomi Smart Band 10", price:45, img:"", asin:"DEINE-ASIN-HIER", type:"watch-fitness",
+    scores:{akku:9, display:8, fitness:6.5, qualitaet:8},
+    pros:["Schickes, schmales Design mit hellem 1,72-Zoll-AMOLED, bei Amazon ab ca. 42–45 €", "Akkulaufzeit im Test bestätigt: 14 Tage bei normaler Nutzung", "Neues Schlaftracking, im Netzwelt-Test Note 2,4 (gut)"],
+    cons:["Kein integriertes GPS", "Gesundheitsfunktionen nur schwach bewertet (Note 4,2)", "Keine geführten Trainings wie bei Fitbit oder Huawei"],
+    blurb:"Design-Sieger unter den günstigen Trackern mit starkem Akku." },
+  { id:"w29", name:"Huawei Band 10", price:30, img:"", asin:"DEINE-ASIN-HIER", type:"watch-fitness",
+    scores:{akku:9, display:7.5, fitness:7.5, qualitaet:8},
+    pros:["Preistipp im Netzwelt-Test, bei Amazon ab ca. 25–33 € (UVP 29,90 €)", "Genaueste Puls- und Blutsauerstoffwerte im Vergleich, 100 Trainingsmodi", "Bis zu 14 Tage Akku, hochwertiges Armband mit angenehmem Verschluss"],
+    cons:["Kein EKG, kein kontaktloses Bezahlen, keine Navigationshinweise", "App nicht im Play Store, Umweg über die Huawei AppGallery nötig", "Kein integriertes GPS"],
+    blurb:"Bester Fitnesstracker unter 35 €, genau und ausdauernd." },
+  { id:"w30", name:"Google Fitbit Charge 6", price:105, img:"", asin:"DEINE-ASIN-HIER", type:"watch-fitness",
+    scores:{akku:7, display:8.5, fitness:8.5, qualitaet:8.5},
+    pros:["Testsieger bei Netzwelt, einziger Tracker im Test mit integrierter EKG-Funktion", "GPS, Google Wallet und Google-Maps-Hinweise, zuverlässige Messwerte", "Bei Amazon rund 99–105 € (UVP 159,95 €)"],
+    cons:["Deutlich teurer als Huawei Band 10 und Xiaomi Smart Band 10", "UVP von 159,95 € zu hoch, erst reduziert attraktiv"],
+    blurb:"Funktionsreichster Tracker im Vergleich mit EKG, GPS und Google-Diensten." },
+  { id:"w31", name:"Xiaomi Smart Band 10 Pro", price:80, img:"", asin:"DEINE-ASIN-HIER", type:"watch-fitness",
+    scores:{akku:8, display:8.5, fitness:7, qualitaet:8},
+    pros:["Großes Display, 150 Sportarten", "Bezahlen mit Xiaomi Pay möglich", "Von Netzwelt als gute Alternative zum Testsieger empfohlen"],
+    cons:["Xiaomi Pay nur mit einem Konto beim Zahlungsdienst Curve", "Keine Möglichkeit, Trainings zu planen und auf ein Ziel hinzuarbeiten", "Mit rund 80 € deutlich teurer als das normale Band 10"],
+    blurb:"Größeres Display und mehr Sportmodi, aber ohne Trainingsplanung." },
   { id:"w9", name:"Xiaomi Watch 5", price:99, img:"", asin:"DEINE-ASIN-HIER", type:"watch-android",
     scores:{akku:8, display:7, fitness:7, qualitaet:6.5},
     pros:["Vollwertiges Wear OS 6 zum Kampfpreis", "Lange Akkulaufzeit für eine Android-Smartwatch"],
@@ -4908,6 +4966,16 @@ initCompassTilt();
 initClickRipple();
 render();
 setTimeout(drawIcons, 60);
+
+/* ---- Direktlinks: techkompass24.de/#handys, #kopfhoerer, #notebooks, #tablets, #smartwatches, #powerbanks ... ---- */
+function openFromHash() {
+  const k = (location.hash || "").replace("#", "").trim().toLowerCase();
+  if (!k) return;
+  const cat = CATEGORIES.find(c => c.key === k);
+  if (cat && cat.ready && !(screen !== "categories" && currentCatalogKey === k)) { noScrollOnce = false; selectCategory(k); }
+}
+window.addEventListener("hashchange", openFromHash);
+openFromHash();
 const footerStatsEl = document.getElementById("footerStats");
 if (footerStatsEl) {
   const footerTotalProducts = Object.values(CATALOG).reduce((sum, c) => sum + c.products.length, 0);
